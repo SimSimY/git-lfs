@@ -1,6 +1,6 @@
 FROM alpine
 
-LABEL maintainer Simon Sommer-Yakov <simonya@gmail.com>
+LABEL maintainer Simon Sommer-Yakov <simon@s-m-y.com>
 
 RUN apk --update add git openssh git-lfs && \
     rm -rf /var/lib/apt/lists/* && \
