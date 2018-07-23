@@ -10,7 +10,7 @@ RUN git config --system url."git@github.com:".insteadOf https://github.com/
 RUN git config --system url."git@bitbucket.org:".insteadOf https://bitbucket.org/
 VOLUME /git
 WORKDIR /git
-
-ENTRYPOINT ["git"]
+COPY pre_git.sh /root
+ENTRYPOINT ["/root/pre_git.sh"]
 CMD ["--help"]
 
